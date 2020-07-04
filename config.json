@@ -1,0 +1,29 @@
+{
+    "key": {
+        "token": "c3f42e68"
+    },
+    "twilio": {
+        "accountSid": "AC8ee83ba1321de14ece9a98f177aad554",
+        "authToken": "60cca931068daf5a2a8687f096ab25fd",
+        "twilioFrom": "+16464614192"
+    },
+    "AWS": {
+        "SECRET_ACCESS_KEY": "tm/6az4Ot57YzVhAAD+9tuw59sf0lWVLpfvo7Gfc",
+        "SECRET_ACCESS_ID": "AKIAT3I4BCUADQFFBUGQ",
+        "REGION_NAME": "ap-south-1",
+        "BUCKET_NAME": "eliteapp"
+    },
+    "mailgun": {
+        "MAILGUN_API_KEY": "8a31b074096b5268ffb21c1070282f55-9ce9335e-7f034331",
+        "MAILGUN_DOMAIN": "mg.makeupartistgo.com",
+        "MAILGUN_FROM": "no-reply@mg.makeupartistgo.com"
+    },
+    "stripe": {
+        "Stripe_Publishable_Key": "pk_test_LLAdXVApiHYl2QUmtHy2HiHT",
+        "Stripe_Secret_Key": "sk_test_QxioQvyU85zxufSvaDuGZJnK"
+    },
+    "_id": "5c8b359427a13955bb1f8d21",
+    "createdAt": "2019-03-15T05:18:12.635Z",
+    "updatedAt": "2019-03-15T05:37:10.199Z",
+    "__v": 0
+}

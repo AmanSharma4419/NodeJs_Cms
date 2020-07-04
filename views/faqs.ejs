@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <style>
+    .panel-default>.panel-heading .panel-title a {
+        font-size: 36px;
+        padding: 14px 0;
+        display: inline-block;
+        width: 100%;
+        }
+        .panel-body p {
+            font-size: 30px;
+        }
+    </style>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="bs-example">
+            <div class="panel-group" id="accordion">
+                <% if (data.length > 0) { %>
+                    <% data.forEach(function(el, index) { %>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne-<%= index %>"><%= index +1 %>. <%= el.question %></a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne-<%= index %>" class="panel-collapse collapse  <% if (index == 0) { %> in <% } %>">
+                                <div class="panel-body">
+                                        <%- el.answer %>
+                                </div>
+                            </div>
+                        </div>
+                        <!----el - current element, i - index -->
+                    <% }); %>                 
+                <% } else{ %>  
+                    <h1>No Content Added!</h1>
+                <% } %>
+            </div>
+        </div>
+  </body>
+</html>

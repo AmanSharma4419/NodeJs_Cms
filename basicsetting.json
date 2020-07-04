@@ -1,0 +1,55 @@
+{
+    "App_Settings": {
+        "Admin_Country": "",
+        "Admin_Currency_Code": "$",
+        "Admin_Currency": "",
+        "Admin_TimeZone": "EDT",
+        "Display_Date_Timezone": "",
+        "Admin_Phone_Number": "+1***********",
+        "Contact_Email": "1stride@gmail.com",
+        "Provider_Timeout_in_seconds": "10",
+        "Default_Search_Radius": "160000",
+        "Scheduled_Request_Pre_Start_Minutes": "10",
+        "Number_of_loop_for_Scheduled_Requests": "10",
+        "Ride_cancellation_charges": "10",
+        "Driver_percentage_profit": "",
+        "Price_per_km": "",
+        "Base_fare": "",
+        "Distance_Unit" : "km",
+        "Pricing_Type" : "global",
+        "Number_of_drivers_in_customer_app": "8",
+        "Android_User_App_Force_Version": 1,
+        "Android_Provider_App_Force_Version": 1,
+        "IOS_User_App_Force_Version": "1.0",
+        "IOS_Provider_App_Force_Version": "1.0"
+    },
+     "Social_Media" :{
+        "facebook" : "https://facebook.com",
+        "twitter" : "https://twitter.com",
+        "instagram" : "https://instagram.com"
+     }
+    ,
+    "Notifi_Settings": {
+        "SMS_Notification": true,
+        "Email_Notification": true,
+        "Tip": true,
+        "Toll": true,
+        "Android_User_App_Force_Update": true,
+        "Android_Provider_App_Force_Update": true,
+        "IOS_User_App_Force_Update": true,
+        "IOS_Provider_App_Force_Update": true
+    },
+    "iOS_Certificates": {
+        "Certificate_Mode": "",
+        "iOS_User_app_push_Certificate": "",
+        "iOS_User_app_push_Key_file": "",
+        "iOS_User_app_push_passphrase": "",
+        "iOS_Provider_app_push_Certificate": "",
+        "iOS_Provider_app_push_Key_file": "",
+        "iOS_Provider_app_push_passphrase": ""
+    },
+    "_id": "5cc28dce7828da1a175d3f58",
+    "createdAt": "2019-04-26T04:49:18.834Z",
+    "updatedAt": "2019-04-26T06:28:44.268Z",
+    "__v": 0
+}

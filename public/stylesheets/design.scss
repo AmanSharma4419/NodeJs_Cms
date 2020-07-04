@@ -1,0 +1,178 @@
+@mixin box-sizing-mixin($boxmodel: border-box) {
+    box-sizing: $boxmodel;
+  }
+  
+  @media screen {
+    // [1] Apply a natural box layout model to all elements. Reset the box-sizing.
+    * {
+      @include box-sizing-mixin; // [1]
+      &:before,
+      &:after {
+        @include box-sizing-mixin; // [1]
+      }
+    }
+  }
+  
+  // Debugging Colors
+  $color-chartreuse: #7af825;
+  $color-crimson: #ea1213;
+  $color-dodger-blue-1: #3c7cff;
+  $color-dodger-blue-2: #2abefe;
+  $color-eminence: #6c3380;
+  $color-forest-green: #1b9143;
+  $color-mine-shaft: #282828;
+  $color-pomegranate: #ed4f0d;
+  $color-razzmatazz: #e61356;
+  $color-ripe-melon: #efc813;
+  
+  // Some good combinated colors, use them with white and black colored font!
+  $color-monza-dc0a0a: #dc0a0a;
+  $color-corn-e1a800: #e1a800;
+  $color-pacific-blue-0099cc: #0099cc;
+  $color-fun-green-009036: #009036;
+  $color-tawny-port-772164: #772164;
+  $color-vivid-violet-9e32a6: #9e32a6;
+  $color-hopbush-cd7dc1: #cd7dc1;
+  $color-azalea-f0b7de: #f0b7de;
+  $color-limeade-8d9f00: #8d9f00;
+  $color-rio-grande-b8d200: #b8d200;
+  $color-sidecar-f2f0ab: #f2f0ab;
+  $color-bitter-lemon-dcdc0a: #dcdc0a;
+  $color-corn-e1a800: #e1a800;
+  $color-bombay-b0b1b3: #b0b1b3;
+  
+  @mixin visuallyhidden-mixin {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    // Extends the .visuallyhidden class to allow the element to be focusable
+    // when navigated to via the keyboard: h5bp.com/p
+    &.focusable {
+      &:active,
+      &:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+      }
+    }
+  }
+  
+  @media screen {
+    .accordion {
+      background: $color-bitter-lemon-dcdc0a;
+      list-style-type: none;
+      margin: 0;
+      padding: 1em;
+    }
+    .acc__header {
+      padding: 0;
+    }
+    .acc__headline {
+      font-size: 1.5em;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+    }
+    .acc__leading {
+      margin: 0.5em 0;
+      padding: 0;
+    }
+    .acc__entry {
+      margin: 0 0 2px 0;
+    }
+    .acc__entry-header {
+      border: 1px solid $color-monza-dc0a0a;
+    }
+    .acc__entry-headline {
+      background: $color-chartreuse;
+      background: $color-crimson;
+      background: $color-corn-e1a800;
+      color: $color-monza-dc0a0a;
+      // border: 1px solid;
+      font-weight: normal;
+      font-size: 1.25em;
+      line-height: 1.25em;
+      margin: 0;
+      // padding: 5px;
+    }
+    .acc__entry-trigger {
+      // Default state
+      color: inherit;
+      display: block;
+      text-decoration: none;
+      transition: background .3s ease;
+      &:hover,
+      &:focus,
+      &:active,
+      &:link,
+      &:visited {
+        // background-color: $color-forest-green;
+      }
+      &:focus,
+      &:active {
+        outline: 2px solid green;
+      }
+      // Collapsed state
+      &:before {
+        background: $color-monza-dc0a0a;
+        color: $color-corn-e1a800;
+        content: '+';
+        display: inline-block;
+        height: 1.25em;
+        line-height: 1.25em;
+        margin: 0 0.25em 0 0;
+        text-align: center;
+        transition: background .3s ease;
+        width: 1.25em;
+      }
+      // Expanded state
+      &[aria-expanded='true'] {
+        background: $color-monza-dc0a0a;
+        color: $color-corn-e1a800;
+        &:before {
+          background: $color-corn-e1a800;
+          color: $color-monza-dc0a0a;
+          content: '-';
+        }
+      }
+    }
+    .acc__entry-content {
+      // background: $color-bombay-b0b1b3;
+      // Needs to stay here
+      overflow: hidden;
+      // padding: 30px;
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .acc__entry-content-inner {
+      padding: 30px;
+    }
+    .acc__entry-content--collapsed {
+      // max-height: 0;
+      // height: auto;
+      opacity: 0;
+      // Reset padding bottom and top
+      // padding-bottom: 0;
+      // padding-top: 0;
+      position: relative;
+      // transition: all .4s ease-in;
+      transition: all .5s ease;
+    }
+    .acc__entry-content--expanded {
+      // Element is sure less height than that value!
+      // max-height: 500px;
+      opacity: 1;
+      // transition: all .4s ease-out;
+      transition: all .5s ease;
+    }
+  }

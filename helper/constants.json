@@ -1,0 +1,23 @@
+{
+	"APP_NAME": "Elite",
+	"DB_NAME": "elite",
+	"DATE_FORMAT": "YYYY-MM-DD hh:mm:ss",
+	"DATE_FORMAT_MMDDYYYY": "DDMMYYYY",
+	"DATE_FORMATE_DDMM": "DDMMhhmm",
+	"DATE_FORMAT_MMM_D_YYYY": "MMM d YYYY",
+	"DATE_FORMAT_MM_DD_YYYY": "MM/DD/YYYY",
+	"DATE_FORMAT_DD_MM_YYYY": "DD/MM/YYYY",
+	"DATE_FORMAT_MMM_D__YYYY": "MMM D, YYYY",
+	"DRIVER_FINDING_TRIPS": "FindingTrips",
+	"TRIP_ON_TRIP": "OnTrip",
+	"TRIP_PICKUP_INROUTE": "PickupInroute",
+	"TRIP_ARRIVED": "PickupArrived",
+	"TRIP_DESTINATION_INROUTE": "DestinationInroute",
+	"TRIP_FINDING": "FindingDrivers",
+	"TRIP_COMPLETED": "Completed",
+	"TRIP_SCHEDULED": "Scheduled",
+	"TRIP_CANCELLED": "Cancelled",
+	"TRIP_WAITING_DRIVER": "WatingForDriver",
+	"DRIVER_OFFLINE": "Offline",
+	"DRIVER_POOL_TRIPS": "OnPoolTrip"
+}

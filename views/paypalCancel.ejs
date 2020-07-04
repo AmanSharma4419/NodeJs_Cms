@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paypal Payment</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+        <p style="font-size:30px;">Your Payment has been cancelled/declined by the paypal.</p>
+        <button id="button-click" class="btn btn-block btn-primary">Go To Dashboard</button>
+    </div>
+    <script>
+        document.querySelector("button").onclick = function() {
+          //console.log("Send post message");
+          window.postMessage("hellopaypal", "*");
+        }
+    </script>
+  </body>
+</html>

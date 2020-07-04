@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%= title %></title>
+    <style>
+      body {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+body .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+	.container {
+		width: 100% !important;
+	}
+	.container .list-group-item:first-child
+	{
+	  border:none !important;
+	}
+	.container .earned .badge-pill {
+		display: inline-block !important;
+		float: none !important;
+	}
+	.container .earned {
+		text-align: center !important;
+	}
+  .container li.earned span.badge.badge-primary.badge-pill {
+    width: 125px;
+    height: 125px;
+    -ms-flex-align: center!important;
+    align-items: center!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+    margin: 0 auto;
+    -ms-flex-align: center!important;
+    align-items: center!important;
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+    color: #fff;
+    font-size: 20px !important;
+		border-radius: 100%;
+		padding: 10px !important;
+		margin-bottom: 0 !important;
+    background: #5a7085 !important;
+  }
+	/* .container li.earned span.badge.badge-primary.badge-pill {
+		font-size: 50px !important;
+		border-radius: 100%;
+		padding: 10px !important;
+		margin-bottom: 0 !important;
+	} */
+	.container .list-group .badge
+	{
+		font-size:12px !important;
+	}
+  .container .list-group .list-group-item {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0;
+    font-weight: bold !important;
+		font-size: 16px !important;
+    padding-left: 20px;
+    padding-right: 20px;
+ }
+	/* .container .list-group .list-group-item {
+		font-weight: bold !important;
+		font-size: 30px !important;
+	} */
+  .container .list-group .list-group-item .badge.badge-primary {
+    background: none;
+    color: #989898;
+    border:none;
+}
+      .list-group-item >.badge {
+           float: right !important;
+           margin-top: 0px !important;
+           margin-right: 0;
+       }
+       li:first-child span.badge.badge-primary.badge-pill {
+           background: green !important;
+           font-size: 15px !important;
+           margin-top: 1px !important;
+       }
+       body {
+         padding-left: 10px !important;
+         padding-right: 10px !important;
+       }
+       .list-group-item
+       {
+         font-weight:bold;
+         font-size: 16px;
+       }
+     </style>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+    <h1><%= title %></h1>
+    <ul class="list-group">
+        <li class="earned list-group-item d-flex justify-content-between align-items-center">
+          <span class="badge badge-primary badge-pill">$<%= data.earned %></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+           Completed: 
+          <span class="badge badge-primary badge-pill"><%= data.completed %></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+           Accepted:
+          <span class="badge badge-primary badge-pill"><%= data.accepted %></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Rejected:
+            <span class="badge badge-primary badge-pill"><%= data.rejected %></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Cancelled:
+            <span class="badge badge-primary badge-pill"><%= data.canceled %></span>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
